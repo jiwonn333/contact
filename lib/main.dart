@@ -8,10 +8,21 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // @override
+  // Widget build(BuildContext context) {
+  //   return MaterialApp(
+  //       home: Center(
+  //           child: Container(width: 30, height: 30, color: Colors.pink)));
+  // }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Center(
-            child: Container(width: 30, height: 30, color: Colors.pink)));
+        home: Scaffold(
+          appBar: AppBar(),
+          body: Container(),
+          bottomNavigationBar: BottomAppBar(child: Text('bottomNavigationBar Test Text'),),
+        )
+    );
   }
 }
