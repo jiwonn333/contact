@@ -11,29 +11,47 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      appBar: AppBar(
-        title: Text('이곳은 앱바'),
-        leading: Icon(Icons.add_call),
-        actions: const [Icon(Icons.star), Icon(Icons.star_border)],
-      ),
-      body: SizedBox(
-        /** 1. TextButton - 텍스트 형태의 버튼 **/
-        // child: TextButton(
-        //   child:Text('버튼안에 들어갈 글자'),onPressed: (){},)
-
-        /** 2. ElevatedButton - 색상이 들어간 형태의 버튼 **/
-        // child: ElevatedButton(
-        //   child: Text("버튼입니당"), onPressed: (){},),
-
-        /** 3. IconButton - 아이콘 버튼 **/
-        child: IconButton(
-          icon: Icon(Icons.phone),
-          onPressed: () {},
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Flexible 간단 예제"),
+          backgroundColor: Colors.red,
         ),
-      ),
-    ));
+        body: Row(
+          children: [
+            Flexible(flex: 3, child: Container(color: Colors.amber)),
+            Flexible(flex: 7, child: Container(color: Colors.black))
+          ]
+        )
+      )
+    );
   }
+
+  // @override
+  // Widget build(BuildContext context) {
+  //   return MaterialApp(
+  //       home: Scaffold(
+  //     appBar: AppBar(
+  //       title: Text('이곳은 앱바'),
+  //       leading: Icon(Icons.add_call),
+  //       actions: const [Icon(Icons.star), Icon(Icons.star_border)],
+  //     ),
+  //     body: SizedBox(
+  //       /** 1. TextButton - 텍스트 형태의 버튼 **/
+  //       // child: TextButton(
+  //       //   child:Text('버튼안에 들어갈 글자'),onPressed: (){},)
+  //
+  //       /** 2. ElevatedButton - 색상이 들어간 형태의 버튼 **/
+  //       // child: ElevatedButton(
+  //       //   child: Text("버튼입니당"), onPressed: (){},),
+  //
+  //       /** 3. IconButton - 아이콘 버튼 **/
+  //       child: IconButton(
+  //         icon: Icon(Icons.phone),
+  //         onPressed: () {},
+  //       ),
+  //     ),
+  //   ));
+  // }
 
 // @override
 // Widget build(BuildContext context) {
