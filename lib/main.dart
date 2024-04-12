@@ -11,20 +11,43 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Flexible 간단 예제"),
-          backgroundColor: Colors.red,
-        ),
-        body: Row(
-          children: [
-            Flexible(flex: 3, child: Container(color: Colors.amber)),
-            Flexible(flex: 7, child: Container(color: Colors.black))
-          ]
+        home: Scaffold(
+            appBar: AppBar(),
+            body: ShopItem()
         )
-      )
     );
   }
+}
+
+class ShopItem extends StatelessWidget {
+  const ShopItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      child: Text('hi'),
+    );
+  }
+}
+
+
+  // @override
+  // Widget build(BuildContext context) {
+  //   return MaterialApp(
+  //     home: Scaffold(
+  //       appBar: AppBar(
+  //         title: Text("Flexible 간단 예제"),
+  //         backgroundColor: Colors.red,
+  //       ),
+  //       body: Row(
+  //         children: [
+  //           Flexible(flex: 3, child: Container(color: Colors.amber)),
+  //           Flexible(flex: 7, child: Container(color: Colors.black))
+  //         ]
+  //       )
+  //     )
+  //   );
+  // }
 
   // @override
   // Widget build(BuildContext context) {
@@ -99,4 +122,4 @@ class MyApp extends StatelessWidget {
 //                   Icon(Icons.star)])
 //       ));
 // }
-}
+
